@@ -8,6 +8,6 @@ export class OrdersController {
 
   @Post('place-order')
   placeOrder(@Body() order: OrderDto) {
-    this.ordersService.placeOrder(order);
+    return this.ordersService.placeOrder(order);
   }
 }
