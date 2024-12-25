@@ -10,4 +10,8 @@ export class OrdersService {
 
     return { message: 'Order Placed!' };
   }
+
+  getOrders() {
+    return this.rabbitClient.send({ cmd: 'fetch-orders' }, {});
+  }
 }
